@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        <legend>Join us</legend>
+        {% include 'include/messages.html' %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="form-container">
+                <tbody>
+                {% for field in form %}
+                    <tr>
+                        <td class="form-label"> {{field.label}} </td>
+                        <td> {{field}} </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <label>
+                <input type="checkbox" checked required>I accept the Terms of Service and Privacy Notice.
+            </label>
+            <br/>
+            <button id="my-button" type="submit">Sign Up</button>
+        </form>
+        Already Have An Account? <a class="my-link" href="/login">Log In</a>.
+    </fieldset>
+{% endblock content %}

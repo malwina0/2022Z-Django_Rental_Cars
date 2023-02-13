@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malwina Rental Cars</title>
+    <link rel="stylesheet"  type="text/css" href="{% static '../static/style.css' %}">
+</head>
+
+<body>
+    {% include 'include/navigation.html' %}
+    <header>
+        <a href="/"><img  class= 'image logo' src='../static/images/logo.png' alt="logo"></a>
+        <br/>
+        <a class="company-name" href="/" target="_self">Malwina Rental Cars</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li> <a class="link" href="/cars" target="_self">Cars</a> </li>
+            <li> <a class="link" href="/price" target="_self">Price calculator</a> </li>
+            <li> <a class="link" href="/rent" target="_self">Rent a car</a> </li>
+            <li> <a class="link" href="/contact" target="_self">Contact us</a> </li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <div class="main-content-class">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        Malwina Wojewoda
+    </footer>
+
+</body>
+
+</html>

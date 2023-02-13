@@ -1,0 +1,334 @@
+body {
+    color: white;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    font-family: Calibri;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+header {
+    padding-top: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+nav {
+    justify-content: center;
+    display: flex;
+    font-size: 22px;
+}
+
+li{
+    transition:0.3s all;
+}
+
+nav li:hover {
+    background-color: #5b1c4c;
+}
+
+article {
+    text-align: center;
+    width: 90%;
+    background-color: rgb(15, 15, 23);
+    background-position: center;
+    opacity: 0.9;
+    margin: 0 auto;
+}
+
+.main-content-class{
+    border: 8px solid #5b1c4c;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(15, 15, 23);
+    text-align: center;
+    opacity: 0.6;
+    position: fixed;
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    padding: 10px 30px;
+}
+
+img:not(.logo){
+    border: 2px solid #9c307f;
+    padding: 0;
+    margin: 5px;
+    object-fit: contain;
+    width:  400px;
+    height: auto;
+}
+
+.logo{
+    width:  auto;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.car_details {
+    font-size: 15px;
+    color: #edc4e2;
+}
+
+.car_in_list{
+    border: 4px solid #270c21;
+    padding: 20px;
+    margin: 40px;
+}
+
+.company-name{
+    color: inherit;
+    text-decoration: inherit;
+    margin-top: 0;
+}
+fieldset{
+    border: 3px solid #5b1c4c;
+    margin: 40px;
+}
+
+legend{
+    font-size: 200%;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+.home-titles{
+    text-align: left;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 0;
+    background-color: #270c21;
+}
+
+.home-descr{
+    text-align: left;
+    border: 3px solid black;
+    padding: 0;
+    margin: 0;
+}
+/* ----------------------------------------- NAVIGATION BAR ----------------------------------------------- */
+/* Navbar container */
+.navbar {
+    background-color: #270c21;
+    font-family: Arial;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-bottom: 3px solid black;
+    z-index: 1; /* do not disappear while scrolling*/
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 10px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+    min-width: 150px;
+    text-align: left;
+}
+
+/* Button change color on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #4e1841;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5b1c4c;
+  min-width: 160px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #9c307f;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ----------------------------------------- FORM ----------------------------------------------- */
+.form-input{
+    padding: 8px 35px;
+    background-color: #4e1841;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.8s all;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+tr td:first-child{
+    width: 62%;
+    text-align: right;
+    vertical-align: middle;
+    padding-bottom: 20px;
+}
+
+tr td:nth-child(2){
+    text-align: left;
+    vertical-align: middle;
+}
+
+table{
+    overflow:hidden;
+    margin-bottom: 30px;
+}
+
+#my-button{
+    text-align: center;
+    padding: 8px 35px;
+    background-color: #5b1c4c;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.4s all;
+    margin-top: 30px;
+}
+
+.my-link{
+    text-decoration: none;
+    color: #9c307f;
+}
+
+.my-link:hover{
+    background-color: #270c21;
+    padding: 2px;
+    color: #edc4e2;
+}
+
+/* --------------------------------------------  MESSAGES  -------------------------------------------- */
+.alert {
+  padding: 10px;
+  background-color: #9c307f;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: #edc4e2;
+  float: right;
+  font-size: 28px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* tablet */
+@media screen and (max-width: 950px) {
+    body{
+        min-width: fit-content;
+        margin: 0;
+        min-height: 100%;
+        width: 100%;
+    }
+    html{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    img:not(.logo){
+        width:  250px;
+    }
+}
+
+/* phone */
+@media screen and (max-width: 500px){
+    fieldset{
+        margin: 0;
+        border: none;
+    }
+    article{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    body{
+        min-width: fit-content;
+        margin: 0;
+        min-height: 100%;
+        width: 100%;
+    }
+    html{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    li{
+        display: inline;
+    }
+    ul{
+        display: inline;
+    }
+    nav{
+        display: inline;
+    }
+    img:not(.logo){
+        width:  100px;
+    }
+}

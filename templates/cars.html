@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% include 'include/messages.html' %}
+    {% for car in cars %}
+        <div class="car_in_list">
+            <img src="{{ car.image.url }}" alt=""/> <br/>
+            <h2>{{ car.car_brand }} {{ car.car_model }}</h2>
+            <a href="/cars/{{ car.id }}/" class="car_details">
+                View details
+            </a>
+            <br/>
+        </div>
+    {% endfor %}
+{% endblock content %}

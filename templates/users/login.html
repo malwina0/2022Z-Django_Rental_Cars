@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        <legend>Log in</legend>
+        {% include 'include/messages.html' %}
+        <form method="POST">
+            {% csrf_token %}
+            <table class="form-container">
+                <tbody>
+                {% for field in form %}
+                    <tr>
+                        <td class="form-label"> {{field.label}} </td>
+                        <td> {{field}} </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <button id="my-button" type="submit">Login</button>
+        </form>
+        Need An Account? <a class="my-link" href="/register">Sign up</a>. <br/>
+        <a class="my-link" href="{% url 'password_reset' %}">Forgot password?</a>
+    </fieldset>
+{% endblock content %}

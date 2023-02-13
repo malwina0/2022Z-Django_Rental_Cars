@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        {% if user.is_authenticated %}
+            <b><legend>Rent a car</legend></b>
+            {% include 'include/messages.html' %}
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-container">
+                {% for field in form %}
+                  <div class="form-label"> {{field.label}} </div>
+                  <div> {{field}} </div>
+                {% endfor %}
+                </div>
+                <label>
+                    <input type="checkbox" checked required>
+                </label>I agree to Terms and Conditions. <em>*(obligatory)</em><br/>
+                <button id="my-button" type="submit">Submit</button>
+            </form>
+        {% else %}
+            Only a logged-in user can make a reservation. <br/>
+            <a class="my-link" href="/login">Log in</a> or <a class="my-link" href="/register">sign up.</a>
+        {% endif %}
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% include 'include/messages.html' %}
+    <div>
+        <h3>{{ car.car_brand }} {{ car.car_model }}</h3>
+        <img src="{{ car.image.url }}" alt=""/> <br/>
+        <p>${{ car.price }} for a day</p>
+        <p>{{ car.description }}</p>
+        production year: {{ car.production_year }}<br/>
+        engine size: {{ car.engine_size }} <br/>
+        <br/>
+        {% if request.user.is_staff %}
+        <div>
+            <a  class="my-link" href="/cars/{{ car.id }}/edit/" >
+                Edit
+            </a>
+            <a class="my-link" href="/cars/{{ car.id }}/delete/">
+                  Delete
+            </a>
+        </div>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

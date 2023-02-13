@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        <legend>Profile</legend>
+        <div>
+            <h2>{{ form.instance.username }}
+                {% if user.is_superuser %}
+                    <small>({{ form.instance.status }})</small>
+                {% endif %}
+            </h2>
+            <p>{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
+            <p>email: {{ form.instance.email }}</p>
+            {% if user.username == form.instance.username or user.is_superuser %}
+                <p>phone number: {{ form.instance.phone }}</p>
+                <p>date of birth: {{ form.instance.birth_date }}</p>
+            {% endif %}
+        </div>
+
+        {% if user.username == form.instance.username or user.is_superuser %}
+            <fieldset>
+                <legend>Edit your data</legend>
+                {% include 'include/messages.html' %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <table class="form-container">
+                        <tbody>
+                        {% for field in form %}
+                            <tr>
+                                <td class="form-label"> {{field.label}} </td>
+                                <td> {{field}} </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <a class="my-link" href={%  url 'password_change' %}>Change password?</a><br/>
+                    <button id='my-button' type="submit">Update</button>
+                </form>
+            </fieldset>
+        {% endif %}
+    </fieldset>
+{% endblock content %}
